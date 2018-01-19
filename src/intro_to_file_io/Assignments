@@ -1,11 +1,11 @@
 1. Write a program that takes a message from the user and saves an encrypted form of that message in a new file. Use any encryption algorithm you choose.
 
-
+DONE
 
 
 2. Create a separate program that asks for a encrypted file (you can use the JFileChooser) and prints the decrypted version.
 
-
+DONE
 
 
 3. Create a program that adds a copyright notice to all the .java files in your Level 3 repositories (e.g. //Copyright © 2017 by Bill Jobs)

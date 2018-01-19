@@ -31,7 +31,7 @@ public class Encryption {
 				 * FileWriter("src/intro_to_file_io/test2.txt", true);)
 				 */
 
-				fw.write("\n" + output);
+				fw.write( output);
 
 				fw.close();
 			} catch (IOException e) {
