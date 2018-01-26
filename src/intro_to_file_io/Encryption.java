@@ -39,3 +39,4 @@ public class Encryption {
 			}
 		}
 	}
+//Copyright © 2018 by Melissa Perez
