@@ -1,0 +1,4 @@
+run
+walk
+run
+walk
