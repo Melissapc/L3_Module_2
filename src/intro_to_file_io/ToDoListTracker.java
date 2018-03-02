@@ -27,6 +27,7 @@ public class ToDoListTracker implements ActionListener {
 		for (String task : list) {
 			tasklist += task;
 			tasklist += "\n";
+			System.out.println(task);
 		}
 		showsList.setText(tasklist);
 		frame.repaint();
@@ -40,7 +41,7 @@ public class ToDoListTracker implements ActionListener {
 	JButton save = new JButton("save");
 	JButton load = new JButton("load");
 	JTextArea showsList = new JTextArea();
-
+	String filename = "src/intro_to_file_io/daily.txt";
 	String persons = "src/intro_to_file_io/";
 
 	ToDoListTracker() {
@@ -80,13 +81,11 @@ public class ToDoListTracker implements ActionListener {
 			list.remove(request);
 		}
 		if (e.getSource().equals(save)) {
-			String filename = JOptionPane.showInputDialog("Choose a file");
 
 			try {
-				FileWriter saves = new FileWriter(persons + filename + ".txt", true);
+				FileWriter saves = new FileWriter(filename);
 				for (String person : list) {
 					saves.write(person + "\n");
-
 				}
 				saves.close();
 			} catch (IOException e1) {
@@ -101,12 +100,12 @@ public class ToDoListTracker implements ActionListener {
 			// String fileName = jfc.getSelectedFile().getAbsolutePath();
 			//
 			list = new ArrayList<String>();
-			System.out.println("load");
+
 			try {
-				BufferedReader br = new BufferedReader(new FileReader("src/intro_to_file_io/desktop.txt"));
+				BufferedReader br = new BufferedReader(new FileReader(filename));
 
 				String line = br.readLine();
-				System.out.println(line);
+
 				while (line != null) {
 					System.out.println(line);
 					list.add(line);

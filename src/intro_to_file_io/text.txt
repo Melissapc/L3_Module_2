@@ -2,7 +2,3 @@ hi
 null
 lol
 
-hi
-null
-lol
-
